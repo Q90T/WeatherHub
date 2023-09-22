@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="Icon" href="result.png">
+</head>
+<body>
+
+    <main>
+
+        <div class="nav-bar">
+            
+                <div class="logo">
+                    <a href="#"><img src="result.png" class ="logo-img"></a>
+                    <a href="#">
+                    <div class="logo-text">
+                        <b class="logo-text-weather">Weather</b>
+                        <div class="space"></div>
+                        <b class="logo-text-hub">Hub</b>
+                    </div>
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" class="tbox" id="city-name" placeholder="Enter the city name..." />
+                    <button data-search-btn class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            
+             <div class="space"></div>
+        </div>
+       
+
+        <div class="article">
+            
+
+            <div class="time-map">
+             <div id="map" class="map">
+                
+             </div>
+             <div  class="time-date">
+                <span class="day" id="day"></span>
+                <span class="time" id="time"></span>
+                <span class="date" id="date"></span>
+             </div>
+            </div>
+
+             <div class="weather-forcast">
+
+                <div class="weather">
+                <div class="weather-main">
+                    weather
+                </div>
+                <div class="weather-temp">
+                    temp
+                </div>
+                <div class="weather-wind">
+                    wind
+                </div>
+                </div>
+
+                <div class="nextWeek">
+                    <lu class="nextWeek-list">
+                        <li>d1</li>
+                        <li>d2</li>
+                        <li>d3</li>
+                        <li>d4</li>
+                        <li>d5</li>
+                        <li>d6</li>
+                        <li>d7</li>
+                    </lu>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="footer-about">
+                <span>
+                    2023 weatherhub,ceated by Ala Eddin Mabrouki 
+                </span>
+            </div>
+            <div id="footer-terms" class="footer-terms">
+                <a  data-ga= "GitHub" href="https://github.com/Q90T" target="_blank">
+                GitHub
+                </a>
+                |
+                <a data-ga="Twitter" href="https://www.twitter.com" target="_blank">
+                𝕏Twitter
+                </a>
+                |
+                <a data-ga="linkedIn" href="https://www.linkedin.com/in/alan-q90t/" target="_blank">
+                LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+
+<script async="false" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCXUfm0t_BFayMXe5_xqOTBzQiYa2jKN8&libraries=places&callback=initMap"></script>
+
+</body>
+</html>
