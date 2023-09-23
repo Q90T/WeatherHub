@@ -1,7 +1,20 @@
-//the menu function
+//the menu functions
+
+//menu three lines animation
 function myFunction(x) {
   x.classList.toggle("change");
 }
+
+
+
+//display and hide the navigation bar
+var nav = document.getElementById('access_nav'),
+    body = document.body;
+
+nav.addEventListener('click', function(e) {
+    body.className = body.className? '' : 'with_nav';
+    e.preventDefault();
+});
 // time and date functions
 
 // Get the elements for the day, time, and date
@@ -65,14 +78,14 @@ setInterval(updateTime, 1000);
 setInterval(updateDate, 1000);
 //setInterval(updatePm, 1000);
 
-// Google Maps API
+// Google Maps API 
 
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
 
   map = new Map(document.getElementById("map"), {
     center: { lat: 22.7942, lng: 5.5361 },
-    zoom: 11,
+    zoom: 14,
     styles: [
       { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
       { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
