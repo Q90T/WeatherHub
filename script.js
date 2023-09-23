@@ -63,12 +63,12 @@ setInterval(updateDate, 1000);
 
 // Google Maps API
 
-async function initMap() {
+async function initMap(a,b) {
   const { Map } = await google.maps.importLibrary("maps");
 
   map = new Map(document.getElementById("map"), {
-    center: { lat: 22.7942, lng: 5.5361 },
-    zoom: 11,
+    center: { lat: a, lng: b },
+    zoom: 8,
     styles: [
       { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
       { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -157,8 +157,15 @@ initMap();
 // OpenWeatherMap API
 const cityName = document.querySelector('#city-name');
 const searchBtn = document.querySelector('[data-search-btn]');
-let a;
-searchBtn.addEventListener('click', getWeather)
+
+searchBtn.addEventListener('click', getWeather);
+// Get the input field
+
+// Execute a function when the user presses a key on the keyboard
+cityName.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {getWeather();}
+});
 
 async function getWeather() {
   let city = cityName.value;
@@ -166,6 +173,6 @@ async function getWeather() {
   let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a7111373aa7c082059593b594237e89a&units=${units}`);
   let data = await response.json();
   console.log(data);
-  a = data.coord.lat;
+  //geting lat and lon
+  initMap(data.coord.lat, data.coord.lon);
 }
-console.log(a);
