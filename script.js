@@ -1,3 +1,7 @@
+//the menu function
+function myFunction(x) {
+  x.classList.toggle("change");
+}
 // time and date functions
 
 // Get the elements for the day, time, and date
