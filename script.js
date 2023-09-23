@@ -4,6 +4,7 @@
   let dayElement = document.querySelector('#day');
   let timeElement = document.querySelector('#time');
   let dateElement = document.querySelector('#date');
+  let pmElement = document.querySelector('#pm');
 
   // Update the day
   function updateDay() {
@@ -25,6 +26,18 @@
     timeElement.innerHTML = h+':'+m;
     return true; 
   }
+  //use pm and am
+  function updatePm() {
+    date = new Date;
+    h = date.getHours();
+    s = 'AM';
+    if(h>=12) { s = "PM"; }
+    if(h==12) { h = 12; }
+    if(h>12) { h = h-12; }
+    if(h<10) { h = "0"+h; }
+    pmElement.innerHTML = s;
+    return true; 
+  }
 
 
   // Update the date
@@ -42,9 +55,11 @@
 updateDay();
 updateTime();
 updateDate();
+//updatePm();
 setInterval(updateDay, 1000);
 setInterval(updateTime, 1000);
 setInterval(updateDate, 1000);
+//setInterval(updatePm, 1000);
 
 // Google Maps API
 
@@ -53,7 +68,7 @@ async function initMap() {
 
   map = new Map(document.getElementById("map"), {
     center: { lat: 22.7942, lng: 5.5361 },
-    zoom: 10,
+    zoom: 11,
     styles: [
       { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
       { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
