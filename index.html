@@ -10,8 +10,18 @@
     <link rel="Icon" href="logo.png">
 </head>
 <body>
-
     <main>
+
+        <nav id="main_nav">
+            <ul class="main-list">
+                <li><a >current location</a></li>
+                <li><a >language</a></li>
+                <li><a >unites</a></li>
+                <li><a >theme</a></li>
+
+                <!-- etc. -->
+            </ul>
+        </nav>
 
         <div class="nav-bar">
             
@@ -29,6 +39,12 @@
                     <input type="text" class="tbox" id="city-name" placeholder="Enter the city name..." />
                     <button data-search-btn class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </div>
+                <div class="container" id="access_nav" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+             
 
             
             
@@ -36,7 +52,6 @@
        
 
         <div class="article">
-            
 
             <div class="time-map">
              <div id="map" class="map">
