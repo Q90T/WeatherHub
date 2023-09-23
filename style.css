@@ -3,7 +3,7 @@ body{
   padding: 0;
   box-sizing: border-box;
   font-family: Helvetica;
-  background-color: #262626;
+  background-color: #0A2429;
   color: aliceblue;
 }
 /*main grid*/
@@ -23,7 +23,7 @@ main{
 /*navigation bar style*/
 .nav-bar {
   grid-area: topbar;
-  background-color: rgb(24, 24, 24);
+  background-color: #051214;
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -36,7 +36,7 @@ main{
  /*searsh bar style*/
 .btn{
   background-color: transparent;
-  color: rgb(219, 219, 219);
+  color: #ffffff;
   border: 1px solid transparent;
   width: 10px;
 }
@@ -52,9 +52,9 @@ main{
   align-items: center;
   justify-items: center;
   padding: 20px 20px ;
-  border: 1px solid #c7c7c7;
+  border: 1px solid #60949E;
   border-radius: 50px;
-  background-color: #525252;
+  background-color: #0E353D;
 }
 .tbox{
 
@@ -100,21 +100,21 @@ input:hover::placeholder{
   font-size: larger;
 }
 .logo-text-hub{
-  padding: 5px;
+  margin-top: 5px;
+  padding: 1px;
   padding-bottom: 0;
-  background-color: #e07b08;
-  color: #000;
-  border-radius: 7px;
+  color: #fff;
 }
 .logo-text-weather{
-  padding: 5px;
+  margin-top: 5px;
+  padding: 1px;
   padding-bottom: 0;
-  color: #ffffff;
+  color: #379AF6;
 }
 .logo-img{
-  height: 80px;
-  width: 80px;
-  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  margin-top: 5px;
 }
 .settings{
   margin: 5px;
@@ -138,7 +138,7 @@ input:hover::placeholder{
   grid-area: map;
   margin: 5px;
   padding: 10px;
-  border: solid 1px #c7c7c7;
+  border: solid 1px #60949E;
   border-radius: 10px;
 }
 /*time display desine*/
@@ -151,10 +151,9 @@ input:hover::placeholder{
   font-weight:bold;
   font-size:1em;
   margin: 5px;
-  padding: 10px;
-  border: solid 1px #c7c7c7;
+  border: solid 1px #60949E;
   border-radius: 10px;
-  background-color: #000000;
+  background-color: #3065CB;
 }
 .day{
   grid-area: day;
@@ -162,18 +161,30 @@ input:hover::placeholder{
   justify-content: center;
   align-items: center;
   font-size: 3em;
-  background-color: #e07b08;
-  color: #000000;
+  background-color: #30CB97;
+  color: #000;
   border-radius: 7px;
-
+  
   
 }
+.pm{
+  grid-area: time;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  color: #268EA2 ;
+  margin-top: auto;
+}
+
 .time{
   grid-area: time;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 6em;
+  color: #ffffff;
+  margin-top: 10px;
 }
 .date{
   grid-area: date;
@@ -181,7 +192,9 @@ input:hover::placeholder{
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  border-radius: 7px;
+  color: #86daeb ;
+  border-top: solid 0.1px #7db2bd;
+
 
 }
 
@@ -189,7 +202,7 @@ input:hover::placeholder{
 .weather-forcast{
   margin: 5px;
   padding: 10px;
-  border: solid 1px #c7c7c7;
+  border: solid 1px #60949E;
   border-radius: 10px;
   grid-area: weather-forcast;
   display: grid;
@@ -208,13 +221,12 @@ input:hover::placeholder{
 }
 .footer{
   grid-area: footer;
-  color:#878787;
-  text-align: center;
-  font-size: small;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
+  background-color: #051214;
+  display: flex;
+  justify-items: center;
+  padding: 5px 10px;
+  align-items: center;
+ 
 
 }
 
@@ -225,5 +237,5 @@ input:hover::placeholder{
   text-decoration:none
 }
 .footer a:hover {
-  color:#e07b08;
+  color:#379AF6;
 }
