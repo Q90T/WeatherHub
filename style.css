@@ -270,10 +270,50 @@ input:hover::placeholder{
   grid-template-rows:60% 40%;
 }
 .weather{
+  display: grid;
+  grid-template-columns: 57% 43%;
+  border-bottom: solid 1px #60949E;
+}
+.weather-main{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   justify-items: center;
+  align-items: center;
+}
+.weather-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*.weather-icon-img{
+  height: 200px;
+  width: 200px;
+}*/
+.weather-icon-text{
+  font-size: 1cm;
+}
+.weather-temp{
+  display: flex;
+  flex-direction: column;
+}
+.weather-temp-value{
+  font-size: 3em;
+  display: flex;
+  margin-bottom: 0;
+}
+.weather-temp-minmax{
+  font-size: 2em;
 
+}
+#temp{
+  font-size: 4.5cm;
+  color: #379AF6;
+}
+
+.weather-temp-feels-like{
+  display: flex;
+  flex-direction: column;
 }
 .nextWeek-list{
   display: flex;
@@ -287,8 +327,7 @@ input:hover::placeholder{
   justify-items: center;
   padding: 5px 10px;
   align-items: center;
- 
-
+  justify-content: space-between;
 }
 
 

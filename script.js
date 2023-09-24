@@ -72,11 +72,11 @@ nav.addEventListener('click', function(e) {
 updateDay();
 updateTime();
 updateDate();
-//updatePm();
+updatePm();
 setInterval(updateDay, 1000);
 setInterval(updateTime, 1000);
 setInterval(updateDate, 1000);
-//setInterval(updatePm, 1000);
+setInterval(updatePm, 1000);
 
 // Google Maps API 
 
@@ -111,6 +111,14 @@ async function getWeather() {
   let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a7111373aa7c082059593b594237e89a&units=${units}`);
   let data = await response.json();
   console.log(data);
+  cityName.value = '';
+  document.getElementById('temp').innerHTML = Math.floor (data.main.temp);
+  document.getElementById('feels-like').innerHTML = Math.floor (data.main.feels_like);
+  document.getElementById('humidity').innerHTML = data.main.humidity;
+  document.getElementById('pressure').innerHTML = data.main.pressure;
+  document.getElementById('min').innerHTML = `min:${Math.floor (data.main.temp_min)}`;
+  document.getElementById('max').innerHTML = `max:${Math.floor (data.main.temp_max)}`;
+  document.getElementById('weather-description').innerHTML = data.weather[0].description;
   //geting lat and lon
   initMap(data.coord.lat, data.coord.lon);
 }
